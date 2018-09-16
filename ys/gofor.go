@@ -1,1 +1,1 @@
-package ys
+package main
