@@ -8,6 +8,10 @@ import "fmt"
 func main() {
 	var a = 20
 	var ia *int
+	ia = &a
+	fmt.Print(&a)
+	fmt.Print("%x\n", ia)
+	fmt.Print("%x\n", *ia)
 
 	ia = &a
 	fmt.Println("%x\n", &a)
