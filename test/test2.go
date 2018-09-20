@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	var user1 user
 	user1.name = "asfa"
-	i := 56
+	i := 5
 	user1.update(i)
 	fmt.Println(user1.name)
 }
