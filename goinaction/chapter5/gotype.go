@@ -3,15 +3,24 @@ package main
 import "fmt"
 
 func main() {
-
-	fmt.Println(isShellSpecialVar(7))
+	var user1 user
+	user1.name = "www"
+	name := user.notify(user1).name
+	fmt.Println(name)
 }
 
-func isShellSpecialVar(c uint8) bool {
-	switch c {
-	case '*', '#', '$', '@', '!', '?', '0', '1', '2', '3', '4', '5',
-		'6', '7', '8', '9':
-		return true
-	}
-	return false
+type user struct {
+	name  string
+}
+
+// notify implements a method with a value receiver.
+func (u user) notify()(user) {
+	u.name = "1212"
+	return u
+}
+
+// changeEmail implements a method with a pointer receiver.
+func (u *user) changeEmail()(*user) {
+	u.name = "1212"
+	return u
 }
