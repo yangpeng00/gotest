@@ -6,8 +6,8 @@ func main() {
 	var i = 3
 	var a *int
 	a = &i
-	as(*a)
-	fmt.Print(a)
+	b := as(*a)
+	fmt.Print(b)
 }
 
 func as(c int) int {
